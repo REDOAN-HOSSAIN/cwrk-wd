@@ -1,0 +1,29 @@
+.media_cont{
+  height: 100%;
+}
+.Media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    transition: 0.3s;
+    margin: 10px;
+  }
+  
+iframe {
+    border-radius: 30px;
+    width: 400px;
+    height: 30vh;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  iframe {
+    width: 80vw;
+  }
+}

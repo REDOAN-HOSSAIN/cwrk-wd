@@ -1,0 +1,109 @@
+
+/* hero-section*/
+.hero-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+  
+  .hero-nav a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2rem;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    padding:.5rem 1rem;
+  }
+  
+  .hero-nav a:hover {
+    color: #ff9500;
+  }
+  
+  
+  
+  #tag-line {
+    font-size: 1.9rem;
+    font-family: "Muli", sans-serif;
+    letter-spacing: 0.3rem;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    padding:0;
+  }
+  #check{
+    width:0;
+    height:0;
+    opacity:0;
+    overflow:hidden;
+    position:absolute;
+  }
+  .toggle{
+    font-size:3rem;
+    color:#fff;
+    position:fixed;
+    top:15px;
+    left:15px;
+    display:none;
+    z-index:99;
+  }
+  
+  @media screen and (max-width: 769px) {
+    .hero-nav {
+      padding: 1rem;
+      justify-content: space-around;
+    }
+    .hero-nav a {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      padding: 0.5em 1em;
+    }
+    .active3 span {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .hero-nav  {
+      position:fixed;
+      z-index:98;
+      display:block;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      transform:translateX(-100%);
+      overflow:auto;
+      opacity:0;
+      transition:.3s ease;
+      background:#000;
+      padding:6rem 0 0;
+    }
+    .hero-nav a {
+      display:block;
+      font-size: 1.6rem;
+      text-transform: none;
+      margin:0;
+      letter-spacing:normal;
+      border:none;
+      border-bottom: 0.5px solid #ff9500;
+      border-radius:0;
+      padding:1rem;
+    }
+    .toggle{display:block;}
+    .hero-section-container{
+      padding-top:5rem;
+    }
+    #check:checked ~ .hero-nav{
+      transform:translateX(0);
+      opacity:1;
+    }
+  }
+  
+  
